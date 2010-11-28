@@ -1,0 +1,33 @@
+<uitl define="labelWidth py:100">
+  <frame key="window">
+    <boxSizer orient="py:wx.VERTICAL">
+      <sizerParam flag="py:wx.EXPAND|wx.LEFT|wx.TOP"
+                  border="py:8" />
+      <boxSizer orient="py:wx.VERTICAL">
+
+      <sizerParam flag="py:wx.EXPAND" />
+
+        <boxSizer>
+          <sizerParam proportion="py:1" flag="py:wx.FIXED_MINSIZE|wx.RIGHT|wx.BOTTOM"
+                      border="py:8" />
+          <staticText label="str:Sequence"
+                      methods="setSizeWH labelWidth, self.GetSize()[1]" />
+
+          <sizerParam proportion="py:2" flag="py:wx.RIGHT|wx.BOTTOM"
+                      border="py:8" />
+          <comboBox key="cmbSeq" />
+
+          <sizerParam proportion="py:1" flag="py:wx.FIXED_MINSIZE|wx.RIGHT|wx.BOTTOM"
+                      border="py:8" />
+          <staticText label="str:Shot"
+                      methods="setSizeWH labelWidth, self.GetSize()[1]" />
+
+          <sizerParam proportion="py:2" flag="py:wx.EXPAND|wx.RIGHT|wx.BOTTOM"
+                      border="py:8" />
+          <comboBox key="cmbShot" />
+        </boxSizer>
+      </boxSizer>
+
+    </boxSizer>
+  </frame>
+</uitl>

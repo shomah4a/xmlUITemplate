@@ -1,0 +1,25 @@
+
+<uitl>
+  <frame key="window">
+    <boxSizer orient="py:wx.VERTICAL">
+      <sizerParam flag="py:wx.EXPAND|wx.LEFT|wx.TOP"
+                  border="py:8" />
+      <boxSizer orient="py:wx.VERTICAL">
+        <sizerParam flag="py:wx.EXPAND|wx.RIGHT|wx.BOTTOM"
+                    border="py:8" />
+        <listBox key="lstSamples" />
+
+        <sizerParam flag="py:wx.ALIGN_RIGHT"
+                    border="py:8" />
+        <boxSizer>
+          <sizerParam flag="py:wx.EXPAND|wx.RIGHT|wx.BOTTOM"
+                      border="py:8" />
+
+          <button key="btnLaunch" label="str:Launch" />
+        
+        </boxSizer>
+
+      </boxSizer>
+    </boxSizer>
+  </frame>
+</uitl>

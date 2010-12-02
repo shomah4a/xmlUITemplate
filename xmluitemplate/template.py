@@ -1,8 +1,12 @@
 #-*- coding:utf-8 -*-
 
 import sys
-from lxml import etree
 import abc
+
+try:
+    from lxml import etree
+except:
+    from xml.etree import ElementTree as etree
 
 
 def loadModule(name):
@@ -12,7 +16,7 @@ def loadModule(name):
 
     mod = __import__(name)
 
-    return reduce(lambda x, y: getattr(x, y), name.split('.'), mod)
+    return reduce(lambda x, y: getattr(x, y), name.split('.')[1:], mod)
 
 
 
@@ -104,9 +108,12 @@ def parseNS(name, map):
 
 def getAttrs(et):
 
-    mp = dict((v, k) for k, v in et.nsmap.iteritems())    
+    try:
+        mp = dict((v, k) for k, v in et.nsmap.iteritems())    
 
-    return dict((parseNS(k, mp), v) for k, v in et.attrib.iteritems())
+        return dict((parseNS(k, mp), v) for k, v in et.attrib.iteritems())
+    except:
+        return et.attrib
 
 
 

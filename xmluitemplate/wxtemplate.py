@@ -52,7 +52,7 @@ class WXTemplate(template.XMLTemplate):
                   parent=ctrl,
                   sizer=None)
 
-        self._parseChild(tree, ctrl, namespace)
+        self._parseChild(tree, ctrl, ns)
 
 
     def _parseSizer(self, tree, parent, namespace):
